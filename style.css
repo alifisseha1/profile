@@ -1,0 +1,121 @@
+.wrapper{
+  display: grid;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  grid-template-columns: 30% 1fr 1fr;
+  grid-template-rows: 30% repeat(4,1fr);
+  grid-template-areas: 'header header header'
+                       'sidebar  cont-1 cont-1'
+                       'sidebar cont-2 cont-2'
+                       'sidebar cont-3 cont-3'
+                       'sidebar footer footer';
+}
+@media only screen and (max-width:1230px)  {
+  .fish-contact{
+    display: none;
+  }
+  .fish-name{
+    display: none;
+  }
+  .header > .fish-full-contact{
+    display: block;
+    margin: 0 auto;
+    color: white;
+    width: 60%;
+    height: auto;
+    background-color: #0c309b;
+
+    text-align: center;
+    padding: 10px;
+
+  }
+}
+@media only screen and (max-width:750px){
+  .wrapper{
+
+    width: 90%;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 'header header'
+                         'sidebar sidebar'
+                         'cont-1 cont-1'
+                         'cont-2 cont-2'
+                          'cont-3 cont-3'
+                          'footer footer';
+  }
+  .img-1{
+    display: block;
+    margin:0 auto;
+    position: relative;
+    top: 0px;
+  }
+}
+.fish-full-contact{
+  display: none;
+}
+
+
+.header{
+  grid-area: header;
+
+  background-image: url(bg-img.jpg);
+}
+.side-bar{
+  grid-area: sidebar;
+  background-color: #1684dd;
+}
+.containt-1{
+  grid-area: cont-1;
+  background-color: #e3e5e5;
+  padding-left: 20px;
+
+}
+.containt-2{
+  grid-area: cont-2;
+  background-color: #cdd4d6;
+  padding-left: 20px;
+}
+.containt-3{
+  grid-area: cont-3;
+  background-color: #a8aeaf;
+  padding-left: 20px;
+}
+.footer{
+  grid-area: footer;
+  background-color: #63545c;
+  padding-left: 20px;
+}
+.img-1{
+  display: block;
+  margin:0 auto;
+  border-radius: 50%;
+  position: relative;
+  bottom: 30px;
+}
+.fish-name{
+  width: 400px;
+  height: 120px;
+  color: white;
+  margin-left: 3%;
+  margin-top: 60px;
+  padding: 15px;
+  float: left;
+  background-color: #0c309b;
+}
+.fish-contact{
+  width: 400px;
+  height: 120px;
+  color: white;
+  margin-left: 55%;
+  margin-top: 60px;
+  padding: 15px;
+  background-color: #0c309b;
+
+}
+.side-div{
+  margin-left: 20px;
+  padding: 10px;
+
+}
